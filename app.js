@@ -39,8 +39,18 @@ function returnAmount(data){
 }
 
 function clickHandler(){
+    if((input2.value>input1.value)&&(input2.value>0)&&(input1.value>0))
+    {
     output1.innerText=(input2.value)-(input1.value);
     var data=output1.innerText
     returnAmount(data)
+    }
+    else{if((input2.value<0)||(input1.value<0))
+    {
+        alert("Error in the amount");
+    }
+    else{
+        alert("Oops you have less cash!!!")
+    }}
 }
 btn1.addEventListener("click",clickHandler)
