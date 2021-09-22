@@ -50,7 +50,7 @@ function clickHandler(){
         alert("Error in the amount");
     }
     else{
-        alert("Oops there is an error!!!")
+        alert("Oops there is an error in entering amount!!!")
     }}
 }
 btn1.addEventListener("click",clickHandler)
