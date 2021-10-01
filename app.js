@@ -39,18 +39,20 @@ function returnAmount(data){
 }
 
 function clickHandler(){
-    if((input2.value>=input1.value)&&(input2.value>0)&&(input1.value>0))
+    if((input2.value<=0)||(input1.value<=0))
     {
-    output1.innerText=(input2.value)-(input1.value);
-    var data=output1.innerText
-    returnAmount(data)
-    }
-    else{if((input2.value<0)||(input1.value<0))
-    {
-        alert("Error in the amount");
+        output1.innerText="Error in entered amount";
     }
     else{
-        alert("Oops there is an error in entering amount!!!")
-    }}
+        if((input2.value)>=(input1.value))
+        {
+        output1.innerText=(input2.value)-(input1.value);
+        var data=output1.innerText;
+        returnAmount(data)
+        }
+        else{
+            output1.innerText="Error in entered amount";
+        }
+    }
 }
 btn1.addEventListener("click",clickHandler)
